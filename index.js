@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 const routes = require('./routes/index.js');
 
 // Use routes
-app.use('/', routes);
+app.use('./views/home.ejs', routes);
 app.use(express.static('public', { 'extensions': ['html', 'css'] }));
 
 // Start the server
