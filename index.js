@@ -12,6 +12,8 @@ const routes = require('./routes/index.js');
 app.use('./views/home.ejs', routes);
 app.use(express.static('public', { 'extensions': ['html', 'css'] }));
 
+app.use('/public/pdfs', express.static('pdfs'));
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
